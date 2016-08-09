@@ -26,3 +26,7 @@ h1 {
   float: left;
   padding: 5px;
 }
+
+.modal-content {
+  padding-left: 10px;
+}

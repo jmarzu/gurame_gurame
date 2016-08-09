@@ -1,0 +1,28 @@
+html body {
+  background: url('/img/minimal.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: rotate(90deg);
+}
+
+h1 {
+  text-align: center;
+}
+
+.linkList {
+
+}
+
+.pictureBoard {
+  margin: 100px;
+}
+
+.painting {
+  width: 400px;
+  height: 400px;
+  transform: rotate(90deg);
+  float: left;
+  padding: 5px;
+}

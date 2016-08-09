@@ -7,7 +7,7 @@ html body {
   background-image: rotate(90deg);
 }
 
-h1 {
+.title {
   text-align: center;
 }
 
@@ -29,4 +29,25 @@ h1 {
 
 .modal-content {
   padding-left: 10px;
+}
+
+.aboutPic {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-content a {
+  padding: 10px;
+}
+
+.paymentForm {
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+footer {
+  text-align: center;
 }

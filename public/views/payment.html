@@ -1,0 +1,38 @@
+<h3 class="title">Purchase Art</h3>
+
+<div class="row paymentForm">
+    <form class="col s12">
+      <div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" size="20" data-stripe="number">
+          <label for="first_name">Name on Card</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" size="20" data-stripe="number">
+          <label for="first_name">Card Number</label>
+        </div>
+      </div>
+      <div class="input-field col s5">
+        <label for="exp_month">Expiration (MM) - Month</label>
+        <input type="text" size="2" data-stripe="exp_month">
+       <!--  <span> / </span> -->
+      </div>
+      <div class="input-field col s2">
+        <span> / </span>
+      </div>
+        <div class="input-field col s5">
+        <label for="exp_year">Expiration (YY) - Year</label>
+        <input type="text" size="2" data-stripe="exp_year">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" size="4" data-stripe="cvc">
+          <label for="email">CVC</label>
+        </div>
+      </div>
+    </form>
+  </div>

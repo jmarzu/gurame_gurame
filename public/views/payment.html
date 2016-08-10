@@ -1,7 +1,21 @@
-<h3 class="title">Purchase Art</h3>
+<h3 class="title">Make Purchase</h3>
+
 
 <div class="row paymentForm">
-    <form class="col s12">
+  <form action="/charge" method="POST">
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+      data-amount="2000"
+      data-name="Stripe.com"
+      data-description="2 widgets"
+      data-image="/img/documentation/checkout/marketplace.png"
+      data-locale="auto">
+    </script>
+  </form>
+
+
+    <!-- <form class="col s12">
       <div class="row">
       <div class="row">
         <div class="input-field col s12">
@@ -15,24 +29,20 @@
           <label for="first_name">Card Number</label>
         </div>
       </div>
-      <div class="input-field col s5">
+      <div class="input-field col s3">
         <label for="exp_month">Expiration (MM) - Month</label>
         <input type="text" size="2" data-stripe="exp_month">
-       <!--  <span> / </span> -->
       </div>
-      <div class="input-field col s2">
+      <div class="input-field col s1">
         <span> / </span>
       </div>
-        <div class="input-field col s5">
+        <div class="input-field col s3">
         <label for="exp_year">Expiration (YY) - Year</label>
         <input type="text" size="2" data-stripe="exp_year">
         </div>
+      <div class="input-field col s3 offset-s2">
+        <input type="text" size="4" data-stripe="cvc">
+        <label for="email">CVC</label>
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input type="text" size="4" data-stripe="cvc">
-          <label for="email">CVC</label>
-        </div>
-      </div>
-    </form>
+    </form> -->
   </div>

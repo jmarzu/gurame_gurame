@@ -1,38 +1,41 @@
-var app = angular.module('Guram_Guram', ['ui.router', 'ui.materialize', 'ngLettering', 'ngAnimate']);
+var app = angular.module('Guram_Guram', ['ui.router', 'ui.materialize', 'ngAnimate']);
 console.log('gurame gurame');
 
-app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('main', {
       url: '/',
-      templateUrl: 'public/views/main.html',
+      templateUrl: 'app/views/main.html',
       controller: 'MainCtrl'
     })
     .state('about', {
       url: '/about',
-      templateUrl: 'public/views/about.html',
+      templateUrl: 'app/views/about.html',
       controller: 'AboutCtrl'
     })
     .state('payment', {
       url: '/payment',
-      templateUrl: 'public/views/payment.html',
+      templateUrl: 'app/views/payment.html',
       controller: 'PaymentCtrl'
     })
     .state('admin', {
       url: '/admin',
-      templateUrl: 'public/views/admin.html',
+      templateUrl: 'app/views/signin.html',
       controller: 'AdminCtrl' 
     })
     .state('products', {
       url: '/products',
-      templateUrl: 'public/views/products.html',
+      templateUrl: 'app/views/products.html',
       controller: 'ProductCtrl'
     })
     .state('art', {
       url: '/art',
-      templateUrl: '/public/views/art.html',
+      templateUrl: 'app/views/art.html',
       controller: 'ArtCtrl'
     });
+
+    // $locationProvider.html5Mode(true);
+
 }]);

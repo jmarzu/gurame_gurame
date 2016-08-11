@@ -1,4 +1,4 @@
-app.controller('ArtCtrl', ['$scope', function($scope) {
+app.controller('ArtCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
   console.log('art controller');
   $rootScope.purchases = [];
 

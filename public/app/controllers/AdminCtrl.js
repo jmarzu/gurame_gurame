@@ -14,8 +14,8 @@ app.controller('AdminCtrl', ['$scope', '$http', '$location', '$httpParamSerializ
       },
       data: $httpParamSerializerJQLike({ password: $scope.user.password })
     }).then(function(success, err){
-      console.log(success);
-      console.log(err);
+      console.log('Success: ', success);
+      console.log('Error: ', err);
     })
 
     // $http.post('/users', $httpParamSerializerJQLike($scope.user)).then(function success(res) {

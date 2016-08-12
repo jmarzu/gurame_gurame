@@ -42,12 +42,12 @@ app.get('/api/products', function(req, res) {
 app.post('/api/inventory', function(req, res) {
   res.send('inventory path works'); 
   db.product.create({
-    title: req.body.title,
-    price: req.body.price,
-    image: req.body.image,
-    description: req.body.description,
-    art: req.body.art,
-    product: req.body.product
+    title: req.param.title,
+    price: req.param.price,
+    image: req.param.image,
+    description: req.param.description,
+    art: req.param.art,
+    product: req.param.product
   }).then(function success(data) {
     console.log(data);
   }).then(function error(data) {

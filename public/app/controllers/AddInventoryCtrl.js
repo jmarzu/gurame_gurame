@@ -4,7 +4,14 @@ app.controller('AddInventoryCtrl', ['$scope', '$http', '$httpParamSerializerJQLi
   $scope.artValues = ['true', 'false'];
   $scope.productValues = ['true', 'false'];
 
-  $scope.inventory = [];
+  $scope.product = {
+    title: '',
+    price: '',
+    image: '',
+    description: '',
+    art: '',
+    product: ''
+  };
 
   $scope.addInventory = function() {
 
@@ -23,8 +30,8 @@ app.controller('AddInventoryCtrl', ['$scope', '$http', '$httpParamSerializerJQLi
         product: $scope.product.product
       })
     }).then(function(success, error) {
-      console.log(success);
-      console.log(error);
+      console.log('success ', success);
+      console.log('error ', error);
     });
   };
 

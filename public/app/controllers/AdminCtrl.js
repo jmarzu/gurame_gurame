@@ -4,6 +4,7 @@ app.controller('AdminCtrl', ['$scope', '$http', '$location', '$httpParamSerializ
    $scope.user = {
     password: ''
   };
+
   $scope.userLogin = function() {
 
     $http({
@@ -12,10 +13,10 @@ app.controller('AdminCtrl', ['$scope', '$http', '$location', '$httpParamSerializ
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      data: $httpParamSerializerJQLike({ password: $scope.user.password })
+      data: $httpParamSerializerJQLike({ 
+        password: $scope.user.password 
+      })
     }).then(function(bool, err){
-      console.log('bool: ', bool);
-      console.log('bool: ', bool.status);
       if(bool.data === true) {
         $location.path('/addInventory');
       }

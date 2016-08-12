@@ -1,1 +1,17 @@
 <h1 class="title">Products</h1>
+
+<div ng-repeat="product in products track by $index">
+  <h4></h4>
+  <div id="Modal5{{ product.id }}" class="modal container">
+    <div class="modal-content">
+        <h2>{{ product.title }}</h2>
+        <h3>Price: ${{ product.price }}</h3>
+        <a ng-click="/#/payment" class="modal-action modal-close waves-effect waves-green btn-flat">Purchase</a>
+        <a href="/#/art" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+  <div class="pictureBoard">
+    <img href="#Modal5{{ product.id }}" class="products" src="{{ product.image }}" modal/>
+  </div>
+</div>

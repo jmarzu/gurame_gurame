@@ -1,5 +1,14 @@
-app.controller('ArtCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+app.controller('ArtCtrl', ['$scope', '$http', function($scope, $http) {
   console.log('art controller');
-  $rootScope.purchases = [];
+  
+  $scope.arts = [];
+
+  $http({
+      method: 'GET',
+      url: '/api/products'
+    }).then(function(data, err){
+      console.log('art ', data);
+      $scope.arts = data.data;
+    });
 
 }]);

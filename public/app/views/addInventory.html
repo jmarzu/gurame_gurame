@@ -1,34 +1,35 @@
 <h1 class="title">Graeme Inventory</h1>
 
 <div class="inventory container row">
-  <form>
+  <form ng-submit="addInventory()">
     <div input-field>
-        <input type="text" length="150">
+        <input type="text" ng-model="product.title" name="title" length="150">
         <label>Title</label>
     </div>
     <div input-field>
-        <input type="text" length="150">
+        <input type="text" ng-model="product.price" name="price" length="150">
         <label>Price</label>
     </div>
     <div input-field>
-        <input type="text" length="150">
+        <input type="text" ng-model="product.image" name="image" length="150">
         <label>Image URL</label>
     </div>
     <div input-field>
-        <input type="text" ng-model="dummyInputs.inputFieldInput" length="150">
+        <input type="text" ng-model="product.description" name="description" ng-model="" length="150">
         <label>Description</label>
     </div>
     <div input-field class="col s6">
-        <select class="" ng-model="select.value1" material-select watch>
-            <option ng-repeat="value in values track by $index">{{value}}</option>
+        <select class="" ng-model="product.art" material-select watch>
+            <option name="art" ng-repeat="value in artValues track by $index">{{value}}</option>
         </select>
         <label>Art</label>
     </div>
     <div input-field class="col s6">
-        <select class="" ng-model="select.value1" material-select watch>
-            <option ng-repeat="value in values">{{value}}</option>
+        <select class="" ng-model="product.product" material-select watch>
+            <option name="product" ng-repeat="value in productValues">{{value}}</option>
         </select>
         <label>Product</label>
     </div>
+    <button type="submit" class="waves-effect waves-light btn" name="addInventory">Add Inventory</button>
   </form>
 </div>

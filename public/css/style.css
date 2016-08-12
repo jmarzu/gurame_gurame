@@ -1,5 +1,5 @@
 html body {
-  /*background-color: lightgreen;*/
+  /*background-color: #838383;*/
   background-image: url('app/img/backgroundRoad.jpg') no-repeat; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,6 +42,21 @@ h3, .title {
   padding: 5px;
 }
 
+.paintingModal {
+  width: 600px;
+  height: 600px;
+  transform: rotate(90deg);
+  float: left;
+  padding: 5px;
+}
+
+.products  {
+  width: 400px;
+  height: 400px;
+  float: left;
+  padding: 5px;
+}
+
 .modal-content {
   padding-left: 10px;
 }
@@ -49,6 +64,7 @@ h3, .title {
 .aboutPic {
   text-align: center;
   border-radius: 10px;
+  margin-top: 25px;
 }
 
 .modal-content a {

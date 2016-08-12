@@ -19,7 +19,6 @@ module.exports = function(sequelize, DataTypes) {
               callback(null, bool)
             });
         });
-
       }
     },
     hooks: {

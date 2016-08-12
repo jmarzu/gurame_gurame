@@ -7,12 +7,8 @@ app.controller('ProductCtrl', ['$scope', '$http', function($scope, $http) {
       method: 'GET',
       url: '/api/products'
     }).then(function(data, err){
-      console.log('data: ', data.data);
-    
-      console.log('Error: ', err);
-    })
-  
-
+      $scope.products = data.data;
+    });
 
   $scope.deleteProducts = function(id, productsIdx) {
     Cart.delete({ id: id }, function success(data) {

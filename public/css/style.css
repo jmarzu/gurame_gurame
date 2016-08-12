@@ -1,6 +1,6 @@
 html body {
-  /*background-color: green;*/
-  background-image: url('public/img/backgroundRoad.jpg') no-repeat; 
+  /*background-color: lightgreen;*/
+  background-image: url('app/img/backgroundRoad.jpg') no-repeat; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -74,4 +74,13 @@ footer {
 .admin {
   padding: 25px;
   border: 1px solid black;
+}
+
+.inventory {
+  padding: 25px;
+  border: 1px solid black;
+}
+
+.brand-logo {
+  margin-left: 10px;
 }

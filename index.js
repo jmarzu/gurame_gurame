@@ -4,6 +4,7 @@ var path = require('path');
 var db = require('./models');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var User = require('./models/user');
+var Product = require('./models/product');
 var app = express();
 
 
@@ -25,21 +26,28 @@ app.get('/users', function(req, res) {
   });
 
 app.post('/users', function(req, res) {
-    console.log('hit the post route');
-    console.log(req.body.password);
-    console.log(typeof req.body.password);
-    // find the user first in case the email already exists
-    db.user.findOne({ password: req.body.password }).then(function(user) {
-      // if (user) return res.status(200).render('products.html');
-      console.log(user)
-      if (user) {
-        res.send('Success').status(200)
-        // res.sendFile('app/views/products.html');
-      } else {
-        res.send('You are not Graeme').status(403);
-      }
-    });
+    // console.log('hit the post route');
+    // console.log(req.body.password);
+    // console.log(typeof req.body.password);
+    db.user.authenticate(null, req.body.password, function(err, bool){
+      console.log('1234 ', bool);
+      res.send(bool);
+    });  
   });
+
+app.get('/api/products', function(req, res) {
+  db.product.findAll({
+    where: {
+      product: true
+    }
+  }).then(function success(data) {
+    console.log(data);
+    res.send(data);
+  }).then(function error(data) {
+    console.log(data);
+  }); 
+
+});
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));

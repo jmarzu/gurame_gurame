@@ -13,17 +13,15 @@ app.controller('AdminCtrl', ['$scope', '$http', '$location', '$httpParamSerializ
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: $httpParamSerializerJQLike({ password: $scope.user.password })
-    }).then(function(success, err){
-      console.log('Success: ', success);
+    }).then(function(bool, err){
+      console.log('bool: ', bool);
+      console.log('bool: ', bool.status);
+      if(bool.data === true) {
+        $location.path('/addInventory');
+      }
+
       console.log('Error: ', err);
     })
-
-    // $http.post('/users', $httpParamSerializerJQLike($scope.user)).then(function success(res) {
-    //   $location.path('/#/products');
-    //   console.log('Success: ', res);
-    // }, function error(res) {
-    //   console.log('Error: ', res);
-    // });
   }
 
 }]);

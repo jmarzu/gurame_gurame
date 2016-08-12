@@ -34,6 +34,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
       url: '/art',
       templateUrl: 'app/views/art.html',
       controller: 'ArtCtrl'
+    })
+    .state('inventory', {
+      url: '/addInventory',
+      templateUrl: 'app/views/addInventory.html',
+      controller: 'AddInventoryCtrl'
     });
 
     // $locationProvider.html5Mode(true);
